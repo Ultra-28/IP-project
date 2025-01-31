@@ -1,2 +1,80 @@
 /* have borders for any columns created */
-div[class^='col']{border: 1px solid red;}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: #f2f2f2;
+}
+header {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    font-size: 24px;
+}
+.product-showcase {
+    margin: 20px;
+}
+.product img {
+    max-width: 100%;
+    height: auto;
+}
+.product button {
+    margin-top: 10px;
+    padding: 10px;
+    border: none;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+.product-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+.product-item {
+    border: 1px solid #ccc;
+    padding: 10px;
+    max-width: 200px;
+}
+.product-item img {
+    max-width: 100%;
+}
+.product-item button {
+    background-color: black;
+    color: white;
+    padding: 5px;
+    border: none;
+    cursor: pointer;
+}
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.login-box {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+.login-box input {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.login-box button {
+    width: 100%;
+    padding: 10px;
+    background-color: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
