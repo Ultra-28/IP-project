@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
             localStorage.setItem("password", password);
 
             alert("Sign-up successful! Redirecting to login page...");
-            window.location.href = "login.html";
+            window.location.href = "login page.html";
         });
     }
 
@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             if (enteredUsername === storedUsername && enteredPassword === storedPassword) {
                 alert("Login successful!");
-                window.location.href = "dashboard.html"; // Redirect to a dashboard page
+                window.location.href = "shop.html"; // Redirect to a dashboard page
             } else {
                 alert("Invalid username or password!");
             }
