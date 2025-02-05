@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Watch Collection</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #f4f4f4;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Fixed Main Header */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #333;
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+        }
+
+        /* Adds space below the fixed header */
+        .content {
+            margin-top: 100px; /* Prevents overlap with fixed header */
+            display: flex;
+            gap: 20px; /* Space between groups */
+        }
+
+        /* Group Box */
+        .group {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: white;
+            padding: 0;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 600px; /* Adjust width as needed */
+            overflow: hidden; /* Ensures no extra spacing */
+        }
+
+        /* Stretched Group Header */
+        .group-header {
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+            background: #555;
+            color: white;
+            padding: 12px;
+            width: 100%; /* Ensures it stretches fully */
+            box-sizing: border-box; /* Prevents extra spacing issues */
+        }
+
+        /* Watches Grid */
+        .watch-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            padding: 15px;
+        }
+
+        .watch-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        img {
+            width: 250px;
+            height: auto;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>Watch Collection</header>
+
+    <div class="content">
+        <!-- Group 1 -->
+        <div class="group">
+            <div class="group-header">Chrono Series</div>
+            <div class="watch-grid">
+                <div class="watch-container"><img src="image1.png" alt="Watch 1"></div>
+                <div class="watch-container"><img src="image2.png" alt="Watch 2"></div>
+                <div class="watch-container"><img src="image3.png" alt="Watch 3"></div>
+                <div class="watch-container"><img src="image4.png" alt="Watch 4"></div>
+            </div>
+        </div>
+
+        <!-- Group 2 -->
+        <div class="group">
+            <div class="group-header">Beta Series</div>
+            <div class="watch-grid">
+                <div class="watch-container"><img src="image5.png" alt="Watch 5"></div>
+                <div class="watch-container"><img src="image6.png" alt="Watch 6"></div>
+                <div class="watch-container"><img src="image7.png" alt="Watch 7"></div>
+                <div class="watch-container"><img src="image8.png" alt="Watch 8"></div>
+            </div>
+        </div>
+
+        <!-- Group 3 -->
+        <div class="group">
+            <div class="group-header">Skale Series</div>
+            <div class="watch-grid">
+                <div class="watch-container"><img src="image9.png" alt="Watch 9"></div>
+                <div class="watch-container"><img src="image10.png" alt="Watch 10"></div>
+                <div class="watch-container"><img src="image11.png" alt="Watch 11"></div>
+                <div class="watch-container"><img src="image12.png" alt="Watch 12"></div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
