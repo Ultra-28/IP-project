@@ -1,34 +1,118 @@
 body {
     font-family: Arial, sans-serif;
     display: flex;
-    justify-content: left;
-    padding: 20px;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 60px; /* Add padding to account for the fixed header */
 }
+
+.header {
+    width: 100%;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 10px;
+    background-color: black;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Ensure the header stays above other content */
+    display: flex;
+    justify-content: center; /* Center the title */
+    align-items: center; /* Vertically center the content */
+    padding-left: 20px; /* Space on the left for the arrow */
+    padding-right: 20px; /* Optional: Space on the right */
+}
+
+.header .back-arrow {
+    position: absolute;
+    left: 20px; /* Position the arrow on the left side */
+    font-size: 24px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px;
+    cursor: pointer;
+}
+
 .container {
     display: flex;
-    max-width: 1200px;
+    max-width: 1600px;
     width: 100%;
+    margin-top: 20px; /* Add margin to prevent content from overlapping the header */
 }
+
 .image-section {
-    flex: 60%;
+    flex: 90%;
 }
-.image-section img {
+
+.slider-container {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+}
+
+.slide img {
     width: 100%;
-    height: auto;
     border-radius: 5px;
 }
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+.dots {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.dot {
+    height: 10px;
+    width: 10px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.active { background-color: #717171; }
+
 .details {
     flex: 60%;
     margin-left: 30px;
 }
+
 .details h1 {
     font-size: 40px;
 }
+
 .price {
     font-size: 18px;
     font-weight: bold;
     margin: 10px 0;
 }
+
 .buy-button {
     background-color: black;
     color: white;
@@ -39,18 +123,11 @@ body {
     margin-top: 10px;
     text-decoration: none;
 }
-.shop-pay {
-    background-color: #6a0dad;
-    color: white;
-    padding: 10px;
-    text-align: center;
-    display: inline-block;
-    margin-top: 10px;
-    text-decoration: none;
-}
+
 .details p {
     font-size: 30px;
 }
+
 .button-container {
     display: flex;
     flex-direction: column;
